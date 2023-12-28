@@ -13,34 +13,58 @@
       body {
         margin: 0;
         padding: 0;
-        background-color: grey;
+        background-color: #fce5cd;
       }
+      /* Header Styles */
       header {
-        background-color: #333; /* Adjust background color as needed */
-        padding: 10px;
+        display: flex /* Header flex container */;
+        align-items: center; /* Header flex container alignment */
+        background-color: #0f3457; /* Header background color */
+        padding: 15px; /* Header padding */
         text-align: center;
+        box-shadow: 0 2px 5px #2990a6; /* Header box shadow */
       }
 
+      /* Header Title */
+      header h1 {
+        color: #fce5cd; /* Header title color */
+        font-size: 24px; /* Header title font size */
+        margin: 0;
+      }
+
+      /* Header Navigation Buttons */
       header button {
         font-size: 16px;
-        padding: 8px 16px;
+        padding: 10px 20px;
         margin: 0 10px;
-        color: white;
-        background-color: #555; /* Adjust button background color as needed */
+        color: #fce5cd; /* Button text color */
+        background-color: #2990a6; /* Button background color */
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 5px #fce5cd; /* Button box shadow */
+
+        /* Additional Styles */
+        outline: none; /* Remove button outline on focus */
       }
 
+      /* Hover effect for buttons */
       header button:hover {
-        background-color: #777; /* Adjust hover background color as needed */
+        background-color: #ea9134; /* Button background color on hover */
+        transform: scale(1.05); /* Scale up slightly on hover */
+      }
+
+      /* Active effect for buttons (when button is clicked or pressed) */
+      header button:active {
+        background-color: #2990a6; /* Darken the background when button is active */
       }
 
       .dice {
         height: 200px;
         width: 200px;
         position: relative;
+        margin-top: 4em;
         transform-style: preserve-3d;
         transform: translateZ(-100px) rotateY(-45deg) rotateX(-45deg);
         transition: transform 1s;
@@ -403,6 +427,7 @@
     </style>
   </head>
   <header>
+    <h1>Jeux de hasard</h1>
     <button id="dice-button">Dé</button>
     <button id="wheel-button">Roue à tourner</button>
   </header>
